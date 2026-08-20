@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 from task import Task
 
 
@@ -20,5 +22,8 @@ while True:
             new(tasks)
         case "exit":
             break
+        case _:
+            print("Invalid command")
+
 
 
