@@ -22,6 +22,8 @@ while True:
             new(tasks)
         case "exit":
             break
+        case "nothing":
+            break
         case _:
             print("Invalid command")
 
