@@ -9,7 +9,7 @@ def isgood(priority):
     else: return False
 
 
-from function import add, remove, show, new, pomoc,wyszukaj,save,show_category
+from function import add, remove, show, new, pomoc, wyszukaj, save, show_category
 
 tasks = []
 while True:
