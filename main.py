@@ -9,7 +9,7 @@ def isgood(priority):
     else: return False
 
 
-from funkcje import add, remove, show, new, pomoc,wyszukaj,save,show_category
+from funkcje import add, remove, show, new, pomoc,wyszukaj,save
 
 tasks = []
 while True:
@@ -42,7 +42,6 @@ while True:
             wyszukaj(taskname.lower(),tasks)
         case "save":
             save(tasks)
-        case "show category":
-            show_category(tasks)
+
         case _:
             print("Invalid command")
