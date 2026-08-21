@@ -9,11 +9,11 @@ def isgood(priority):
     else: return False
 
 
-from funkcje import add, remove, show, new, pomoc,wyszukaj,save
+from function import add, remove, show, new, pomoc, wyszukaj, save, show_category
 
 tasks = []
 while True:
-    dzialanie = input("Enter the action you want to perform (add/remove/show/new/exit/help/find/save(all taks in a file) ")
+    dzialanie = input("Enter the action you want to perform (show category/add/remove/show/new/exit/help/find/save(all taks in a file) ")
     match dzialanie.lower():
         case "add":
             taskname=input("Enter the action name")
@@ -42,6 +42,7 @@ while True:
             wyszukaj(taskname.lower(),tasks)
         case "save":
             save(tasks)
-
+        case "show category":
+            show_category(tasks)
         case _:
             print("Invalid command")
