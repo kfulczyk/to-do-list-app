@@ -50,3 +50,13 @@ def save(tasks):
         for task in tasks:
             plik.write("TO-DO LIST:\n")
             plik.write(f"{task.taskname} | {task.category} | priorytet: {task.priority}\n")
+def show_category(tasks):
+        category_name = input("Podaj kategorię: ").strip().lower()
+        czy = False
+        for task in tasks:
+            if task.category.lower() == category_name:
+                print( task.taskname)
+        czy = True
+
+        if (czy == False):
+            print("Brak zadań w tej kategorii.")
