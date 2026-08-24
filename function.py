@@ -12,12 +12,12 @@ def add(taskname, tasks, category, priority):
 def remove(taskname, tasks):
     for task in tasks[:]:
         if task.taskname.lower() == taskname.lower():
-            tasks.remove(task)
+            task.isdone=True
 
 
 def show(tasks):
-    for task in sorted(tasks, key=lambda x: x.priority):
-        print("task: ",task.taskname, " category:", task.category, "priority:" ,task.priority)
+    for task in sorted(tasks, key=lambda x: x.isdone):
+        print("task: ",task.taskname, " category:", task.category, "priority:" ,task.priority, "is done: ",task.isdone)
 def wyszukaj(taskname,tasks):
     exists = any(task.taskname == taskname for task in tasks[:])
     if exists:
