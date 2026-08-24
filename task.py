@@ -3,3 +3,4 @@ class Task:
         self.taskname=taskname
         self.category=category
         self.priority=priority
+        self.isdone=False
